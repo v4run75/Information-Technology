@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>
+bubblesort
+</TITLE>
+<SCRIPT type="text/javascript">
+var a = [33, 113, 3, 526, 100, 784, 218, 123, 9];
+document.write('Unsorted Array: ' + a + '<BR>');
+function bubbleSort(a)
+{
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i] > a[i+1]) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+bubbleSort(a);
+document.write('Sorted Array: ' + a );
+</SCRIPT>
+</HEAD>
